@@ -8,7 +8,7 @@ const express_1 = __importDefault(require("express"));
 const path_1 = __importDefault(require("path"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const morgan_1 = __importDefault(require("morgan"));
-const routes_1 = __importDefault(require("./routes"));
+const routes_1 = __importDefault(require("../routes"));
 var app = express_1.default();
 app.use(morgan_1.default("dev"));
 app.use(express_1.default.json());
