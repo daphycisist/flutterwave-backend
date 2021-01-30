@@ -1,10 +1,10 @@
 import createError, { HttpError } from "http-errors";
-import express, { Request} from "express";
+import express, { Request } from "express";
 import path from "path";
 import cookieParser from "cookie-parser";
 import logger from "morgan";
 
-import userRouter from "./routes"
+import userRouter from "./routes";
 
 var app = express();
 
@@ -31,5 +31,13 @@ app.use(function (err: HttpError, req: Request, res: express.Response) {
   res.status(err.status || 500);
   res.render("error");
 });
+
+const port = process.env.PORT || 3000;
+
+if (process.env.NODE_ENV !== "test") {
+  app.listen(port, () => {
+    console.log(`Server started on http://localhost:${port}`);
+  });
+}
 
 export default app;

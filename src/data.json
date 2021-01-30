@@ -1,0 +1,11 @@
+{
+  "message": "My Rule-Validation API",
+  "status": "success",
+  "data": {
+    "name": "Precious Agiamah",
+    "github": "@daphycisist",
+    "email": "agiamah.precious@gmail.com",
+    "mobile": "08108612173",
+    "twitter": "@computerhnhhh"
+  }
+}
